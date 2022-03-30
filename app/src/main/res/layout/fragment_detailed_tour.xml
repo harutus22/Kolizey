@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.util_fragments.DetailedTourFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleEnabled="false"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorRadius="2dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1" />
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/slider"
+                app:layout_constraintEnd_toEndOf="@id/slider"
+                app:layout_constraintHorizontal_bias="0.1"
+                app:layout_constraintStart_toStartOf="@id/slider"
+                app:layout_constraintTop_toTopOf="@id/slider"
+                app:layout_constraintVertical_bias="0.2"
+                android:src="@drawable/back_arrow_white"/>
+
+            <ImageView
+                android:id="@+id/fav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/favourite_no"
+                app:layout_constraintBottom_toBottomOf="@id/slider"
+                app:layout_constraintEnd_toEndOf="@id/slider"
+                app:layout_constraintHorizontal_bias="0.9"
+                app:layout_constraintStart_toStartOf="@id/slider"
+                app:layout_constraintTop_toTopOf="@id/slider"
+                app:layout_constraintVertical_bias="0.2" />
+
+            <LinearLayout
+                android:id="@+id/info_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_rounded"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/slider">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        android:id="@+id/hotel_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/hotel_example"
+                        android:textColor="@color/person_count_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                            android:id="@+id/rating_bar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:srb_borderColor="#D8B99D"
+                            app:srb_fillColor="#D8B99D"
+                            app:srb_numberOfStars="5"
+                            app:srb_rating="3"
+                            app:srb_starSize="20dp"
+                            app:srb_stepSize="0.5" />
+
+                        <TextView
+                            android:id="@+id/rating_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:text="(56)"
+                            android:textColor="@color/count_number"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#EBEBEB"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/from_to"
+                    app:layout_constraintVertical_bias="0.2" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/flight_from"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/small_plain"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="Виліт з Києва"
+                        android:textColor="@color/person_count_color" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/person_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:drawableLeft="@drawable/customers"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical|end"
+                            android:text="2 особи"
+                            android:textColor="@color/person_count_color"
+                            android:textStyle="bold" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/about_hotel_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:text="Про готель"
+                android:textColor="@color/darker_main_color"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/info_tour" />
+
+            <TextView
+                android:id="@+id/about_hotel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/about_hotel_text"
+                app:layout_constraintEnd_toEndOf="@id/about_hotel_title"
+                app:layout_constraintStart_toStartOf="@id/about_hotel_title"
+                app:layout_constraintTop_toBottomOf="@id/about_hotel_title" />
+
+            <TextView
+                android:id="@+id/hotel_class_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Клас готелю"
+                android:textColor="@color/main_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/about_hotel_title"
+                app:layout_constraintTop_toBottomOf="@id/about_hotel" />
+
+            <com.iarcuschin.simpleratingbar.SimpleRatingBar
+                android:id="@+id/rating_hotel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="@id/hotel_class_text"
+                app:layout_constraintEnd_toEndOf="@id/about_hotel_title"
+                app:layout_constraintTop_toTopOf="@id/hotel_class_text"
+                app:srb_borderColor="#D8B99D"
+                app:srb_fillColor="#D8B99D"
+                app:srb_numberOfStars="5"
+                app:srb_rating="5"
+                app:srb_starSize="20dp"
+                app:srb_stepSize="1" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#EBEBEB"
+                app:layout_constraintEnd_toEndOf="@id/rating_hotel"
+                app:layout_constraintStart_toStartOf="@id/hotel_class_text"
+                app:layout_constraintTop_toBottomOf="@id/rating_hotel" />
+
+            <TextView
+                android:id="@+id/hotel_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Тип готелю"
+                android:textColor="@color/main_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/about_hotel_title"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <TextView
+                android:id="@+id/hotel_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Клубний"
+                android:textColor="#D8B99D"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@id/hotel_type_text"
+                app:layout_constraintEnd_toEndOf="@id/divider2"
+                app:layout_constraintTop_toTopOf="@id/hotel_type_text" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#EBEBEB"
+                app:layout_constraintEnd_toEndOf="@id/rating_hotel"
+                app:layout_constraintStart_toStartOf="@id/hotel_class_text"
+                app:layout_constraintTop_toBottomOf="@id/hotel_type" />
+
+            <TextView
+                android:id="@+id/amenities_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Зручності"
+                android:textColor="@color/main_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/about_hotel_title"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <GridLayout
+                android:id="@+id/amenities_grid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:columnCount="3"
+                android:useDefaultMargins="true"
+                app:layout_constraintEnd_toEndOf="@id/rating_hotel"
+                app:layout_constraintStart_toStartOf="@id/hotel_class_text"
+                app:layout_constraintTop_toBottomOf="@id/amenities_text">
+
+                <TextView
+                    android:id="@+id/line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/line"
+                    android:drawablePadding="5dp"
+                    android:text="1-ша лінія"
+                    android:layout_gravity="center|start|end"
+                    android:textColor="@color/text_selected" />
+
+                <TextView
+                    android:id="@+id/food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/food"
+                    android:drawablePadding="5dp"
+                    android:layout_gravity="center"
+                    android:text="UAI"
+                    android:textColor="@color/text_selected" />
+
+                <TextView
+                    android:id="@+id/pool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/pool"
+                    android:drawablePadding="5dp"
+                    android:text="Басейн, SPA"
+                    android:textColor="@color/text_selected" />
+
+            </GridLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="20dp"
+                app:cardElevation="50dp"
+                android:elevation="40dp"
+                app:layout_constraintTop_toBottomOf="@id/amenities_grid">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="10dp"
+                        android:text="122 860₴"
+                        android:textColor="@color/person_count_color"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/price"
+                        android:gravity="center_vertical"
+                        android:text="@string/tour_date_example"
+                        android:textColor="@color/manager_color"
+                        android:textSize="12sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/apply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/next_back"
+                        android:text="@string/booked"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

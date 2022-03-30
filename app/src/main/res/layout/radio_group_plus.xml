@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<worker8.com.github.radiogroupplus.RadioGroupPlus
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/five_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_btn_selector"
+            android:checked="false"/>
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srb_borderColor="#D8B99D"
+            app:srb_fillColor="#D8B99D"
+            app:srb_numberOfStars="5"
+            app:srb_rating="5"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/five_star_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="136 готелей від 111 364₴"
+            android:layout_weight="1"
+            android:textColor="#C4C4C4"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/four_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_btn_selector"
+            android:checked="false"/>
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srb_borderColor="#D8B99D"
+            app:srb_fillColor="#D8B99D"
+            app:srb_numberOfStars="5"
+            app:srb_rating="4"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/four_star_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="136 готелей від 111 364₴"
+            android:layout_weight="1"
+            android:textColor="#C4C4C4"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/three_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_btn_selector"
+            android:checked="false"/>
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srb_borderColor="#D8B99D"
+            app:srb_fillColor="#D8B99D"
+            app:srb_numberOfStars="5"
+            app:srb_rating="3"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/three_star_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="136 готелей від 111 364₴"
+            android:layout_weight="1"
+            android:textColor="#C4C4C4"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/two_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_btn_selector"
+            android:checked="false"/>
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srb_borderColor="#D8B99D"
+            app:srb_fillColor="#D8B99D"
+            app:srb_numberOfStars="5"
+            app:srb_rating="2"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/two_star_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="136 готелей від 111 364₴"
+            android:layout_weight="1"
+            android:textColor="#C4C4C4"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/one_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radio_btn_selector"
+            android:checked="false"/>
+
+        <com.iarcuschin.simpleratingbar.SimpleRatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srb_borderColor="#D8B99D"
+            app:srb_fillColor="#D8B99D"
+            app:srb_numberOfStars="5"
+            app:srb_rating="1"
+            app:srb_starSize="20dp"
+            app:srb_stepSize="0.5" />
+
+        <TextView
+            android:id="@+id/one_star_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="136 готелей від 111 364₴"
+            android:layout_weight="1"
+            android:textColor="#C4C4C4"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+</worker8.com.github.radiogroupplus.RadioGroupPlus>

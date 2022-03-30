@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/myToursFragment"
+        android:title="@string/my_tours"
+        android:icon="@drawable/my_tours"/>
+    <item
+        android:id="@+id/favouritesFragment"
+        android:title="@string/favourite"
+        android:icon="@drawable/fav"/>
+    <item
+        android:id="@+id/infoFragment"
+        android:title="@string/information"
+        android:icon="@drawable/info"/>
+    <item
+        android:id="@+id/profileFragment"
+        android:title="@string/profile"
+        android:icon="@drawable/profile"/>
+    <item
+        android:id="@+id/helpFragment"
+        android:title="@string/help"
+        android:icon="@drawable/help"/>
+</menu>

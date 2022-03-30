@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#803438</color>
+    <color name="purple_700">#803438</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="main_color">#803438</color>
+    <color name="reg_second">#F9F5F1</color>
+    <color name="darker_main_color">#501818</color>
+
+    <color name="text_unselected">#979797</color>
+    <color name="text_selected">#D8B99D</color>
+    <color name="selected_edit_text">#D8B99D</color>
+    <color name="manager_color">#D8B99D</color>
+    <color name="tour_date">#B8B8B8</color>
+    <color name="price_color">#D8B99D</color>
+    
+    <color name="count_number">#C4C4C4</color>
+    <color name="person_count_color">#75262A</color>
+    <color name="filter_text_color">#D8B99D</color>
+    <color name="seach_strok_color">#75262A</color>
+</resources>

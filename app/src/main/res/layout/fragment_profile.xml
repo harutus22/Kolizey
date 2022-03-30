@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragment.bottom_navigation_fragments.ProfileFragment"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_profile"
+            android:textSize="24sp"
+            android:textColor="@color/darker_main_color"
+            android:textStyle="bold"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/log_out"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/logout"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:scaleType="center"
+            android:src="@drawable/test_image"
+            android:adjustViewBounds="true"
+            app:shapeAppearanceOverlay="@style/profileImage"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/reg_second">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_color"
+                android:textStyle="bold"
+                android:text="@string/test_name"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"/>
+
+            <TextView
+                android:id="@+id/telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/test_number"
+                android:textColor="@color/main_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/email"
+                android:layout_marginBottom="5dp"
+                app:layout_constraintHorizontal_bias="0.2"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/test_mail"
+                android:textColor="@color/main_color"
+                app:layout_constraintStart_toStartOf="@id/telephone"
+                app:layout_constraintEnd_toStartOf="@id/edit"
+                app:layout_constraintBottom_toTopOf="@id/city"
+                android:layout_marginBottom="5dp"
+                />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="@string/test_city"
+                android:textColor="@color/main_color"
+                app:layout_constraintStart_toStartOf="@id/telephone"
+                app:layout_constraintEnd_toStartOf="@id/edit"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.85"
+                />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pencil"
+                android:padding="10dp"
+                android:background="@drawable/edit_photo_back"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/main_color"
+        android:textStyle="bold"
+        android:text="@string/my_manager"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/user_manager"/>
+
+            <TextView
+                android:id="@+id/manager_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/manager_color"
+                android:text="@string/test_manager_name"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/manager_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/manager_color"
+                android:text="@string/test_company"
+                android:gravity="end"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/phone_manager"/>
+
+            <TextView
+                android:id="@+id/manager_telephone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/manager_color"
+                android:text="@string/manager_test_telephone"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/mail_manager"/>
+
+            <TextView
+                android:id="@+id/manager_email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/manager_color"
+                android:text="@string/test_manager_mail"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/location_manager"/>
+
+            <TextView
+                android:id="@+id/manager_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/manager_color"
+                android:text="@string/test_manager_location"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggle_button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:singleSelection="true"
+        android:layout_marginTop="20dp"
+        app:checkedButton="@id/tour_history">
+
+
+        <Button
+            android:id="@+id/tour_history"
+            style="@style/ProfileButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/tour_history"
+            android:textColor="@color/text_profile_selector"/>
+
+        <Button
+            android:id="@+id/tour_booked"
+            style="@style/ProfileButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/booked_tours"
+            android:textColor="@color/text_profile_selector"/>
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:listitem="@layout/tour_history_item"
+        tools:itemCount="5"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
